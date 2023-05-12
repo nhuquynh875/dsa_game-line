@@ -1,0 +1,11 @@
+C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\obj\Debug\Game_line.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\obj\Debug\Game_line.csproj.SuggestedBindingRedirects.cache
+C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\obj\Debug\Game_line.Properties.Resources.resources
+C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\obj\Debug\Game_line.csproj.GenerateResource.cache
+C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\obj\Debug\Game_line.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\bin\Debug\Game_line.exe.config
+C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\bin\Debug\Game_line.exe
+C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\bin\Debug\Game_line.pdb
+C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\obj\Debug\Game_line.exe
+C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\obj\Debug\Game_line.pdb
+C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\obj\Debug\Game_line.Form1.resources
