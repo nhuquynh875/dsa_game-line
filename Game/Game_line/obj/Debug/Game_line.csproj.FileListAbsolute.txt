@@ -9,3 +9,16 @@ C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\bin\Debug\Game_line.pdb
 C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\obj\Debug\Game_line.exe
 C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\obj\Debug\Game_line.pdb
 C:\Users\Asus\Desktop\Game_dsa\Game_line\Game_line\obj\Debug\Game_line.Form1.resources
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\bin\debug\Game_line.exe.config
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\bin\debug\Game_line.exe
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\bin\debug\Game_line.pdb
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\obj\Debug\Game_line.csproj.AssemblyReference.cache
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\obj\Debug\Game_line.csproj.SuggestedBindingRedirects.cache
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\obj\Debug\Game_line.Form1.resources
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\obj\Debug\Game_line.Main.resources
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\obj\Debug\Game_line.Properties.Resources.resources
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\obj\Debug\Game_line.csproj.GenerateResource.cache
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\obj\Debug\Game_line.csproj.CoreCompileInputs.cache
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\obj\Debug\Game_line.exe
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\obj\Debug\Game_line.pdb
+D:\2022_2023\DSA\dsa_game-line\Game\Game_line\obj\Debug\Game_line.Player.resources

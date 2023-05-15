@@ -16,7 +16,15 @@ namespace Game_line
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Main main = new Main();
+            Application.Run(main);
+            main.Dispose();
+            Player player = new Player();
+            Application.Run(player);
+            player.Dispose();
             Application.Run(new Form1());
+            
+
 
 
         }
