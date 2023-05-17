@@ -67,7 +67,7 @@ namespace Game_line
                 else
                 {
                     this.Close();
-                    Form1 game = new Form1();
+                    Game game = new Game();
                     game.ShowDialog();
                 }
             }

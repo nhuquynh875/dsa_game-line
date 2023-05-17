@@ -22,7 +22,7 @@ namespace Game_line
             Player player = new Player();
             Application.Run(player);
             player.Dispose();
-            Application.Run(new Form1());
+            Application.Run(new Game());
             
 
 
