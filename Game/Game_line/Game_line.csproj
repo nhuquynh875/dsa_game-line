@@ -97,8 +97,21 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="bin\Debug\" />
+    <Content Include="bin\Debug\haicham0.bmp" />
+    <Content Include="bin\Debug\haicham1.bmp" />
+    <Content Include="bin\Debug\so0.bmp" />
+    <Content Include="bin\Debug\so1.bmp" />
+    <Content Include="bin\Debug\so2.bmp" />
+    <Content Include="bin\Debug\so3.bmp" />
+    <Content Include="bin\Debug\so4.bmp" />
+    <Content Include="bin\Debug\so5.bmp" />
+    <Content Include="bin\Debug\so6.bmp" />
+    <Content Include="bin\Debug\so7.bmp" />
+    <Content Include="bin\Debug\so8.bmp" />
+    <Content Include="bin\Debug\so9.bmp" />
+    <Content Include="bin\Debug\soNone.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

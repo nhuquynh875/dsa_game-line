@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +16,7 @@ namespace Game_line
     {
         public static int[,] a = new int[9, 9];
         public static Label[,] Box = new Label[9, 9];
+        public static Label[] Pixel = new Label[9];
 
 
         public int Selectcol, Selectrow, Newcol, Newrow;
@@ -25,8 +27,13 @@ namespace Game_line
         public Queue<Point> shortest_path;
         public Point point;
         public Point lastPoint;
-        public int timecountofbox = 0;
 
+        public static int Score = 0;
+
+        public int timecountofbox = 0;
+        public int Timecount = 0;
+        public int second = 0;
+        public int minute = 0;
         public Game()
         {
             InitializeComponent();
@@ -47,11 +54,25 @@ namespace Game_line
                     Box[i, j] = new Label();
                     Box[i, j].Location = new Point(6 + 60 * i, 95 + 60 * j);
                     Box[i, j].Size = new Size(50, 50);
-
+                    Box[i, j].BackColor = Color.Transparent;
                     Box[i, j].BackgroundImage = new Bitmap("none.png");
 
                     this.Controls.Add(Box[i, j]);
                     Box[i, j].Click += new EventHandler(Box_Click);
+                }
+                for (int i = 0; i < 4; i++)
+                {
+                    Pixel[i] = new Label();
+                    Pixel[i].Location = new Point(499 - (i) * 41, 0);
+                    Pixel[i].Size = new Size(41, 60);
+                    this.Controls.Add(Pixel[i]);
+                }
+                for (int i = 4; i < 9; i++)
+                {
+                    Pixel[i] = new Label();
+                    Pixel[i].Size = new Size(41, 60);
+                    Pixel[i].Location = new Point(165 - (i - 4) * 41, 0);
+                    this.Controls.Add(Pixel[i]);
                 }
         }
 
@@ -139,6 +160,30 @@ namespace Game_line
                     Box[i, j].Image = null;
         }
 
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            Timecount++;
+            second = Timecount / 2;
+            minute = second / 60;
+            second = second % 60;
+
+            Pixel[4].Image = new Bitmap("so" + Convert.ToString(second % 10) + ".bmp");
+            Pixel[5].Image = new Bitmap("so" + Convert.ToString(second / 10) + ".bmp");
+            Pixel[7].Image = new Bitmap("so" + Convert.ToString(minute % 10) + ".bmp");
+            Pixel[8].Image = new Bitmap("so" + Convert.ToString(minute / 10) + ".bmp");
+            Pixel[6].Image = new Bitmap("haicham" + Convert.ToString(Timecount % 2) + ".bmp");
+
+
+            int score= Score;
+            for (int i = 0; i < 4; i++)
+            {
+                Pixel[i].Image = new Bitmap("so" + Convert.ToString(score % 10) + ".bmp");
+
+                score = score / 10;
+            }
+
+        }
+
         private void Box_Click(object sender, EventArgs e)
         {
             Label boxs = sender as Label;
@@ -174,11 +219,8 @@ namespace Game_line
 
                     if (shortest_path == null)
                         Console.WriteLine("can not move");
-
                     else
                     {
-                        
-                        //Point lastPoint= shortest_path.Peek();
                         p = new Point[shortest_path.Count];
                         int count = shortest_path.Count;
                         for (int i = 0; i < count; i++)
