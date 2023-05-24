@@ -30,8 +30,16 @@ namespace Game_line
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 200;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Game
             // 
@@ -53,7 +61,8 @@ namespace Game_line
         }
 
         #endregion
-        
+
+        private Timer timer;
     }
 }
 
