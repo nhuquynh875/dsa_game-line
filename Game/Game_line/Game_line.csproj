@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameRule.Designer.cs">
+      <DependentUpon>GameRule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GameRule.resx">
+      <DependentUpon>GameRule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +92,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -112,6 +122,18 @@
     <Content Include="bin\Debug\so8.bmp" />
     <Content Include="bin\Debug\so9.bmp" />
     <Content Include="bin\Debug\soNone.bmp" />
+    <None Include="Resources\gamerule9.png" />
+    <None Include="Resources\gamerule8.png" />
+    <None Include="Resources\gamerule7.png" />
+    <None Include="Resources\gamerule64.png" />
+    <None Include="Resources\istockphoto-1150113426-612x612.jpg" />
+    <None Include="Resources\gamerule5.png" />
+    <None Include="Resources\gamerule4.png" />
+    <None Include="Resources\gamerule3.png" />
+    <None Include="Resources\gamerule2.png" />
+    <None Include="Resources\gamerule.png" />
+    <None Include="Resources\309430571_5969846613049377_5292086020603637971_n1.jpg" />
+    <None Include="Resources\309430571_5969846613049377_5292086020603637971_n.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

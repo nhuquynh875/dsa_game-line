@@ -35,3 +35,17 @@ C:\Users\Asus\Desktop\dsa_game-line\Game\Game_line\obj\Debug\Game_line.csproj.Ge
 C:\Users\Asus\Desktop\dsa_game-line\Game\Game_line\obj\Debug\Game_line.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Desktop\dsa_game-line\Game\Game_line\obj\Debug\Game_line.exe
 C:\Users\Asus\Desktop\dsa_game-line\Game\Game_line\obj\Debug\Game_line.pdb
+D:\dsa_game-line\Game\Game_line\bin\debug\Game_line.exe.config
+D:\dsa_game-line\Game\Game_line\bin\debug\Game_line.exe
+D:\dsa_game-line\Game\Game_line\bin\debug\Game_line.pdb
+D:\dsa_game-line\Game\Game_line\obj\Debug\Game_line.csproj.AssemblyReference.cache
+D:\dsa_game-line\Game\Game_line\obj\Debug\Game_line.csproj.SuggestedBindingRedirects.cache
+D:\dsa_game-line\Game\Game_line\obj\Debug\Game_line.Game.resources
+D:\dsa_game-line\Game\Game_line\obj\Debug\Game_line.Main.resources
+D:\dsa_game-line\Game\Game_line\obj\Debug\Game_line.Player.resources
+D:\dsa_game-line\Game\Game_line\obj\Debug\Game_line.Properties.Resources.resources
+D:\dsa_game-line\Game\Game_line\obj\Debug\Game_line.csproj.GenerateResource.cache
+D:\dsa_game-line\Game\Game_line\obj\Debug\Game_line.csproj.CoreCompileInputs.cache
+D:\dsa_game-line\Game\Game_line\obj\Debug\Game_line.exe
+D:\dsa_game-line\Game\Game_line\obj\Debug\Game_line.pdb
+D:\dsa_game-line\Game\Game_line\obj\Debug\Game_line.GameRule.resources

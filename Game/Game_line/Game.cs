@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Game_line
 {
@@ -28,6 +30,10 @@ namespace Game_line
         public Point point;
         public Point lastPoint;
 
+        public bool iscore = false;
+        public bool menuDe = false;
+        public bool menuBinhthuong = false;
+        public bool menuKho = false;
         public static int Score = 0;
 
         public int timecountofbox = 0;
@@ -60,20 +66,20 @@ namespace Game_line
                     this.Controls.Add(Box[i, j]);
                     Box[i, j].Click += new EventHandler(Box_Click);
                 }
-                for (int i = 0; i < 4; i++)
-                {
-                    Pixel[i] = new Label();
-                    Pixel[i].Location = new Point(499 - (i) * 41, 0);
-                    Pixel[i].Size = new Size(41, 60);
-                    this.Controls.Add(Pixel[i]);
-                }
-                for (int i = 4; i < 9; i++)
-                {
-                    Pixel[i] = new Label();
-                    Pixel[i].Size = new Size(41, 60);
-                    Pixel[i].Location = new Point(165 - (i - 4) * 41, 0);
-                    this.Controls.Add(Pixel[i]);
-                }
+            for (int i = 0; i < 4; i++)
+            {
+                Pixel[i] = new Label();
+                Pixel[i].Location = new Point(499 - (i) * 41, 0);
+                Pixel[i].Size = new Size(41, 60);
+                this.Controls.Add(Pixel[i]);
+            }
+            for (int i = 4; i < 9; i++)
+            {
+                Pixel[i] = new Label();
+                Pixel[i].Size = new Size(41, 60);
+                Pixel[i].Location = new Point(165 - (i - 4) * 41, 0);
+                this.Controls.Add(Pixel[i]);
+            }
         }
 
         public static int[,] Create_matrix()
@@ -85,7 +91,7 @@ namespace Game_line
             bool stop;
 
             for (i = 0; i < 9; i++)
-                for (j = 0; j < 9; j++) 
+                for (j = 0; j < 9; j++)
                     matrix[i, j] = 0;
 
             //create big ball
@@ -103,7 +109,7 @@ namespace Game_line
                             remain--;
                             if (remain == 0)
                             {
-                                matrix[i, j] =  1; 
+                                matrix[i, j] = 1;
                                 stop = true;
                                 break;
                             }
@@ -148,16 +154,16 @@ namespace Game_line
 
         public void Display_matrix(int[,] matrix)
         {
-            for(int i = 0; i < 9; i++)
+            for (int i = 0; i < 9; i++)
                 for (int j = 0; j < 9; j++)
-                if (matrix[i, j] != 0)
-                {
+                    if (matrix[i, j] != 0)
+                    {
 
-                    Box[i, j].Image = new Bitmap(Convert.ToString(matrix[i, j]) + ".png");
-                }
-                else
+                        Box[i, j].Image = new Bitmap(Convert.ToString(matrix[i, j]) + ".png");
+                    }
+                    else
 
-                    Box[i, j].Image = null;
+                        Box[i, j].Image = null;
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -174,7 +180,7 @@ namespace Game_line
             Pixel[6].Image = new Bitmap("haicham" + Convert.ToString(Timecount % 2) + ".bmp");
 
 
-            int score= Score;
+            int score = Score;
             for (int i = 0; i < 4; i++)
             {
                 Pixel[i].Image = new Bitmap("so" + Convert.ToString(score % 10) + ".bmp");
@@ -237,14 +243,21 @@ namespace Game_line
                                 Box[p[i].X, p[i].Y].Image = new Bitmap("none.png");
                             Box[p[i].X, p[i].Y].Refresh();
 
-          
+
                         }
                         Box[lastPoint.X, lastPoint.Y].Image = new Bitmap(Convert.ToString(a[Selectcol, Selectrow]) + ".png");
                         a[lastPoint.X, lastPoint.Y] = a[Selectcol, Selectrow];
 
                         a[Selectcol, Selectrow] = 0;
 
+                        KiemTra(a);
+                        if (!iscore)
+                        {
+                            Tolen(a);
+                            KiemTra(a);
+                            Create_new_ball(a);
 
+                        }
                         Display_matrix(a);
                     }
                 }
@@ -253,7 +266,17 @@ namespace Game_line
                 Display_matrix(a);
             }
         }
+        public void Tolen(int[,] matrix)
+        {
 
+            for (int i = 0; i < 9; i++)
+                for (int j = 0; j < 9; j++)
+                    if (matrix[i, j] < 0)
+                    {
+                        Box[i, j].Image = new Bitmap(Convert.ToString(-(matrix[i, j])) + ".png");
+                        a[i, j] = -matrix[i, j];
+                    }
+        }
 
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -273,6 +296,32 @@ namespace Game_line
             else timer.Stop();
 
             timecountofbox++;
+        }
+
+        private void menuDe_Click(object sender, EventArgs e)
+        {
+            menuDe= true;
+            menuKho= false;
+            menuBinhthuong= false;
+        }
+        private void menuTrung_Click(object sender, EventArgs e)
+        {
+            menuDe = false;
+            menuKho = false;
+            menuBinhthuong = true;
+        }
+        private void menuKho_Click(object sender, EventArgs e)
+        {
+            menuDe = false;
+            menuKho = true;
+            menuBinhthuong = false;
+        }
+
+        private void helpmenu_click(object sender, EventArgs e)
+        {
+            GameRule pm = new GameRule();
+            pm.ShowDialog();
+
         }
 
         public static Queue<Point> BFS(int[,] matrix, int x1, int y1, int x2, int y2)
@@ -350,6 +399,7 @@ namespace Game_line
             return shortest_path;
 
         }
+        
 
         public static int countEmpty(int[,] ma)
         {
@@ -360,10 +410,148 @@ namespace Game_line
             return count;
         }
 
+        public void KiemTra(int[,] mt)
+        {
+            ArrayList arraylist = new ArrayList();
+            int demngang, demdoc, demcheophai, demcheotrai, x, y;
 
 
+
+            for (int i = 0; i < 9; i++)
+                for (int j = 0; j < 9; j++)
+                {
+                    //Kiem tra hang ngang
+                    x = i;
+                    y = j;
+                    demngang = 0;
+                    while ((x < 8) && (mt[x, y] == mt[x + 1, y]) && (mt[x, y] != 0))
+                    {
+                        demngang++;
+                        x++;
+                    }
+                    //Kiem tra hang doc
+                    x = i;
+                    y = j;
+                    demdoc = 0;
+                    while ((y < 8) && (mt[x, y] == mt[x, y + 1]) && (mt[x, y] != 0))
+                    {
+                        demdoc++;
+                        y++;
+                    }
+                    //Kiem tra cheo phai
+                    x = i;
+                    y = j;
+                    demcheophai = 0;
+                    while ((x < 8) && (y < 8) && (mt[x, y] == mt[x + 1, y + 1]) && (mt[x, y] != 0))
+                    {
+                        demcheophai++;
+                        x++;
+                        y++;
+                    }
+
+                    // Kiem tra cheo phai
+                    x = i;
+                    y = j;
+                    demcheotrai = 0;
+                    while ((x > 0) && (y < 8) && (mt[x, y] == mt[x - 1, y + 1]) && (mt[x, y] != 0))
+                    {
+                        demcheotrai++;
+                        x--;
+                        y++;
+                    }
+                    if (menuDe == true)
+                    {
+                        if (demngang >= 2)
+                        {
+                            for (int k = 1; k < (demngang + 1); k++) a[i + k, j] = 0;
+                            arraylist.Add(new Point(i, j)); Score += demngang + 1;
+                        }
+                        else if (demdoc >= 2)
+                        {
+                            for (int k = 1; k < (demdoc + 1); k++) a[i, j + k] = 0;
+                            arraylist.Add(new Point(i, j)); Score += demdoc + 1;
+                        }
+                        else if (demcheophai >= 2)
+                        {
+                            for (int k = 1; k < (demcheophai + 1); k++)
+                                a[i + k, j + k] = 0; arraylist.Add(new Point(i, j)); Score += demcheophai + 1;
+                        }
+                        else if (demcheotrai >= 2)
+                        {
+                            for (int k = 1; k < (demcheotrai + 1); k++) a[i - k, j + k] = 0;
+                            arraylist.Add(new Point(i, j)); Score += demcheotrai + 1;
+                        }
+                        else if ((demngang > 2) || (demdoc > 2) || (demcheotrai > 2) || (demcheophai > 2)) Score += demcheophai + demcheotrai + demdoc + demngang - 1;
+                    }
+                    if (menuBinhthuong == true)
+                    {
+                        if (demngang >= 3)
+                        {
+                            for (int k = 1; k < (demngang + 1); k++) a[i + k, j] = 0;
+                            arraylist.Add(new Point(i, j)); Score += demngang + 1;
+                        }
+                        else if (demdoc >= 3)
+                        {
+                            for (int k = 1; k < (demdoc + 1); k++) a[i, j + k] = 0;
+                            arraylist.Add(new Point(i, j)); Score += demdoc + 1;
+                        }
+                        else if (demcheophai >= 3)
+                        {
+                            for (int k = 1; k < (demcheophai + 1); k++)
+                                a[i + k, j + k] = 0; arraylist.Add(new Point(i, j)); Score += demcheophai + 1;
+                        }
+                        else if (demcheotrai >= 3)
+                        {
+                            for (int k = 1; k < (demcheotrai + 1); k++) a[i - k, j + k] = 0;
+                            arraylist.Add(new Point(i, j)); Score += demcheotrai + 1;
+                        }
+                        else if ((demngang > 3) || (demdoc > 3) || (demcheotrai > 3) || (demcheophai > 3)) Score += demcheophai + demcheotrai + demdoc + demngang - 1;
+                    }
+                    if (menuKho == true)
+                    {
+                        if (demngang >= 4)
+                        {
+                            for (int k = 1; k < (demngang + 1); k++) a[i + k, j] = 0;
+                            arraylist.Add(new Point(i, j)); Score += demngang + 1;
+                        }
+                        else if (demdoc >= 4)
+                        {
+                            for (int k = 1; k < (demdoc + 1); k++) a[i, j + k] = 0;
+                            arraylist.Add(new Point(i, j)); Score += demdoc + 1;
+                        }
+                        else if (demcheophai >= 4)
+                        {
+                            for (int k = 1; k < (demcheophai + 1); k++)
+                                a[i + k, j + k] = 0; arraylist.Add(new Point(i, j)); Score += demcheophai + 1;
+                        }
+                        else if (demcheotrai >= 4)
+                        {
+                            for (int k = 1; k < (demcheotrai + 1); k++) a[i - k, j + k] = 0;
+                            arraylist.Add(new Point(i, j)); Score += demcheotrai + 1;
+                        }
+                        else if ((demngang > 4) || (demdoc > 4) || (demcheotrai > 4) || (demcheophai > 4)) Score += demcheophai + demcheotrai + demdoc + demngang - 1;
+                    }
+                }
+            for (int k = 0; k < arraylist.Count; k++)
+            {
+                point = (Point)arraylist[k];
+                a[point.X, point.Y] = 0;
+                //destroy.Play();
+            }
+
+            if (arraylist.Count == 0)
+            {
+                iscore = false;
+            }
+            else iscore = true;
+
+            Display_matrix(a);
+
+        }
 
     }
 
     
+
+
 }
