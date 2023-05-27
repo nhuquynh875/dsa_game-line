@@ -129,6 +129,11 @@ namespace Game_line
             int tmp, i, j, remain;
             bool stop;
 
+            if (count <= 3)
+            {
+                MessageBox.Show("Game over!", "Thông báo");
+                stop = true;
+            }
             for (tmp = 0; tmp < 3; tmp++)
             {
                 remain = random.Next(count--) + 1;
@@ -151,7 +156,7 @@ namespace Game_line
                 }
             }
         }
-
+                
         public void Display_matrix(int[,] matrix)
         {
             for (int i = 0; i < 9; i++)
@@ -399,7 +404,6 @@ namespace Game_line
             return shortest_path;
 
         }
-        
 
         public static int countEmpty(int[,] ma)
         {
