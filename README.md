@@ -49,10 +49,10 @@ This is our game project for our final lab in our Object-Oriented Programming co
 
 | Order |         Name          |     ID      |            Email                         |                       Github account                        |     Lecture lab   |
 | :---: | :-------------------: | :---------: | :--------------------------------------: | :---------------------------------------------------------: |:-----------------:|
-|   1   | Nguyen Thi Thanh Thao | ITITIU20310 |ITITIU20310@student.hcmiu.edu.vn          | [thanhthao](https://github.com/nanalynh)                    | 
-|   2   | Trinh Thi Nhu Quynh   | ITITIU20291 |ititiu20291@student.hcmiu.edu.vn 	       | [nhu quynh](https://github.com/nhuquynh875) 		             |      
-|   3   | Ho Tu Quyen           | ITITIU19196 |ITITIU19196@student.hcmiu.edu.vn          | [Ho Tu Quyen](https://github.com/HoTuQuyen))          |
-|   4   |  Nguyen Huu Chau      | ITITIU20174 | ITITIU20174@student.hcmiu.edu.vn         | [Chau]( https://github.com/HChau1)                    |
+|   1   | Nguyen Thi Thanh Thao | ITITIU20310 |ITITIU20310@student.hcmiu.edu.vn          | [thanhthao](https://github.com/nanalynh)                    | Mr. P. Q. S. Lam  |
+|   2   | Trinh Thi Nhu Quynh   | ITITIU20291 |ititiu20291@student.hcmiu.edu.vn 	 | [nhu quynh](https://github.com/nhuquynh875) 	               | Mr. P. Q. S. Lam  |
+|   3   | Ho Tu Quyen           | ITITIU19196 |ITITIU19196@student.hcmiu.edu.vn          | [Ho Tu Quyen](https://github.com/HoTuQuyen)                 | Mr. P. Q. S. Lam  |
+|   4   |  Nguyen Huu Chau      | ITITIU20174 | ITITIU20174@student.hcmiu.edu.vn         | [Chau]( https://github.com/HChau1)                          ||Mr.Thanh          |
 
 
 
@@ -72,78 +72,18 @@ This is our game project for our final lab in our Object-Oriented Programming co
 ## Game <a name="Game"></a>:joystick:
 ### Technologies :globe_with_meridians:
 
-- Language: [JAVA](https://www.java.com/en/)
-- Framework: [Eclipse]([https://www.jetbrains.com/idea/](https://www.eclipse.org/)), [Visual Studio Code](https://code.visualstudio.com)
-- Library: [JavaFx](https://openjfx.io)
+- Language: [C#](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/)
+- Framework: [Visual studio ](https://visualstudio.microsoft.com/)
+
 
 
 ### How to play ? 
-Players will direct the character's Anya movement in order to place bombs to killing the enemy. After the player has killed all of the monsters the game will be end.
-
+Color Lines is a traditional puzzle game in which players must form lines of five or more balls of the same color on a grid-based board. After finishing a game, players are requested to enter their name into an option pane. After entering their name, a scoreboard appears, displaying the top players and their respective scores. The game starts with a randomized grid of colored balls, and players must move the balls intelligently to build lines.Players can make moves to create lines by selecting a ball and a target cell.When five or more balls of the same color form a line, those balls are removed from the board and points are awarded.
 </div>
 
 ### Game logic :bulb:
 
-- Character: The character is controlled by the arrow key combination, only one bomb can be placed at a time.Moreover ,The character will gain speed change if the value is SpeedItem.
 
-![player_down_4](https://user-images.githubusercontent.com/114456930/209472771-e97c292d-60c3-4b76-b9d9-fadbc0562a06.png)
-
-
-
-<br />
-
-
-- Bomb :When the bomb explodes, it will create a fire trail, if the character or the enemy hits the fire trail, they will all be destroyed. The length of the flame will increase if the character eats the special items
-
-![boom1](https://user-images.githubusercontent.com/114456930/209472788-c8e9a1b5-04e2-46ad-aec8-461c5eb89be1.png)
-
-<br />
-- Enemy: 
-
-![bossTank_down](https://user-images.githubusercontent.com/114456930/209472816-652e21f9-6804-4cf6-9199-336319cf13c2.png)
-<br />
-
-
-<br />
--Gift and doll house : it Can be broken by bombs and can contain items
-
-![gifts](https://user-images.githubusercontent.com/114456930/209473062-8fe5ee36-e601-4a8f-90ec-76de572a67c2.png)
-<br />	
-![doll](https://user-images.githubusercontent.com/114456930/209473059-6f9e2b0a-1d77-4daa-b258-34393c975d26.png)
-<br />
-
-- Sofa, tree ,cloud and teddy bear it cannot be broken to limit the movement of characters and enemies
-
-![cloud](https://user-images.githubusercontent.com/114456930/209473097-e2685e49-6db0-4484-91d0-177652a806ff.png)
-![sofa](https://user-images.githubusercontent.com/114456930/209473098-4277154c-0fa6-441b-afd8-376a0bd27fb4.png)
-![tree](https://user-images.githubusercontent.com/114456930/209473100-f9e1b40e-7509-45c1-b2c0-3eaa056c3129.png)
-![bear](https://user-images.githubusercontent.com/114456930/209473095-016d9567-87b6-4780-a1eb-4df5f45f57fa.png)
-<br />
--Special items:
-<br />
-+Shoe(SpeedItem):The character will gain high speed 
-![item_shoe](https://user-images.githubusercontent.com/114456930/209473136-92815176-82df-43e6-bb42-4f4036cc6176.png)
-<br />
-Bomb item: change the power of bomb 
-![item_bombsize](https://user-images.githubusercontent.com/114456930/209473134-0f79e5a1-2c28-4282-9393-44f516cfba4b.png)
-![item_bomb](https://user-images.githubusercontent.com/114456930/209473133-fd0f055d-0cf5-4a47-839e-3049575d71df.png)
-<br />
-## Map Items 🗺️:
-<br />
-1. Cloud
-<br />
-2. dollhouse <br />
-3. tree 
-<br />
-4. gifts <br />
-5. snow <br />
-6. bear <br />
-7. bear <br />
-8. sofa <br /> 
-9. sofa <br />
-
-
-<br />
 
 ## UML Class Diagram and explain <a name="UML-class-diagram and explain"></a>:
 # Control 🦋:
