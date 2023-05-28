@@ -42,7 +42,8 @@
 </div>
 
 <div style="text-align:justify">
-This is our game project for our final lab in our Object-Oriented Programming course in semester 1 (2021 - 2022).The project is built entirely using available java libraries with graphics using Java Swing.
+Our team leveraged our knowledge and skills in Algorithms and Data Structures to implement our Line project. Game Line 98 is a very popular game that has been available on PC since 2003. A classic ball game with bright neon graphics. The content of the game is very simple, and you can score points by aligning three or more balls of the same color vertically, horizontally, or diagonally. Players try to score as many points as possible. There are many interesting levels that increase in difficulty the more players want to challenge them. This is the data structures and algorithms final project semester (2022-2023).
+	
 </div>
 
 ### Team Members :
