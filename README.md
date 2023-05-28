@@ -55,4 +55,56 @@ Our team leveraged our knowledge and skills in Algorithms and Data Structures to
 |   3   | Ho Tu Quyen           | ITITIU19196 |ITITIU19196@student.hcmiu.edu.vn          | [Ho Tu Quyen](https://github.com/HoTuQuyen)                 | Mr. P. Q. S. Lam  |
 |   4   |  Nguyen Huu Chau      | ITITIU20174 | ITITIU20174@student.hcmiu.edu.vn         | [Chau]( https://github.com/HChau1)                          ||Mr.Thanh  |
 
+| :---- | :------------------------------------------------------- | :-------: | 
+| 1     |                   | nhu quynh |
+| 2     |                                     | Thanh Thao|
+| 3     |            | Tu Quyen  |
+| 4     |                          | Huu Chau |
 
+
+<!-- Game -->
+<br />
+
+## Game <a name="Game"></a>:joystick:
+### Technologies 🌐
+
+- Language: [C#](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/)
+- Framework: [Visual studio ](https://visualstudio.microsoft.com/)
+
+
+
+### How to play ? 
+Color Lines is a traditional puzzle game in which players must form lines of five or more balls of the same color on a grid-based board. After finishing a game, players are requested to enter their name into an option pane. After entering their name, a scoreboard appears, displaying the top players and their respective scores. The game starts with a randomized grid of colored balls, and players must move the balls intelligently to build lines.Players can make moves to create lines by selecting a ball and a target cell.When five or more balls of the same color form a line, those balls are removed from the board and points are awarded.
+</div>
+
+### Game logic 💡
+To launch the💡 open the project in your code editor, press Run. After that, the game will be launched.
+<br />
+<img width="517" alt="gamesceen" src="https://github.com/nanalynh/DSP-lab/assets/114456930/e413e1dd-98ce-4218-9c65-6bd110035372">
+<br />
+In the Game tab contains 4 options: three levels: easy, average, hard which help player choose level game, and 
+Help, to instruct the game.
+<br />
+<img width="120" alt="level" src="https://github.com/nanalynh/DSP-lab/assets/114456930/d7aa0ecf-b55c-4cd2-97ac-d6c3d2b155a8">
+<br />
+We also help the information table so that players can login to play.
+<br />
+<img width="395" alt="infor" src="https://github.com/nhuquynh875/dsa_game-line/assets/114456930/4fc784bc-c0a4-4362-8968-d40e7c6fff6f">
+<br />
+Game over panel 
+<br />
+![Game over background](https://github.com/nhuquynh875/dsa_game-line/assets/114456930/b3fe4531-69e1-4b00-b83a-e48ebb35ca32)
+
+
+
+
+
+
+
+
+
+
+	
+
+
+## References<a name="References">  :eye👁👅👁Cl👁👅👁titled Diagram drawio](https://github.com/nhuquynh875/dsa_game-line/assets/114456930/fc2f70b1-5725-47d9-b3a5-57ad87271880)
