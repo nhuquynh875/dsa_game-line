@@ -122,6 +122,8 @@ Class Diagram:<br/>
 
 ## References<a name="References">  :eye::tongue::eye:
 
+# Class diagram :
+![Untitled Diagram drawio](https://github.com/nhuquynh875/dsa_game-line/assets/114456930/fc2f70b1-5725-47d9-b3a5-57ad87271880)
 
 
 
