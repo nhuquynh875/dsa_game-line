@@ -53,7 +53,7 @@ Our team leveraged our knowledge and skills in Algorithms and Data Structures to
 |   1   | Nguyen Thi Thanh Thao | ITITIU20310 |ITITIU20310@student.hcmiu.edu.vn          | [thanhthao](https://github.com/nanalynh)                    | Mr. P. Q. S. Lam  |
 |   2   | Trinh Thi Nhu Quynh   | ITITIU20291 |ititiu20291@student.hcmiu.edu.vn 	 | [nhu quynh](https://github.com/nhuquynh875) 	               | Mr. P. Q. S. Lam  |
 |   3   | Ho Tu Quyen           | ITITIU19196 |ITITIU19196@student.hcmiu.edu.vn          | [Ho Tu Quyen](https://github.com/HoTuQuyen)                 | Mr. P. Q. S. Lam  |
-|   4   |  Nguyen Huu Chau      | ITITIU20174 | ITITIU20174@student.hcmiu.edu.vn         | [Chau]( https://github.com/HChau1)                          ||Mr.Thanh  |
+|   4   |  Nguyen Huu Chau      | ITITIU20174 | ITITIU20174@student.hcmiu.edu.vn         | [Chau]( https://github.com/HChau1)                          |Mr.Thanh  |
 
 
 
@@ -111,4 +111,4 @@ Prototype is a creational in
 	
 
 
-## References<a name="References">  :eye👁👅👁Cl👁👅👁titled Diagram drawio](https://github.com/nhuquynh875/dsa_game-line/assets/114456930/fc2f70b1-5725-47d9-b3a5-57ad87271880)
+
