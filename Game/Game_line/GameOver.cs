@@ -19,10 +19,11 @@ namespace Game_line
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Close();
             Game game = new Game();
             game.newGameToolStripMenuItem();
             game.ShowDialog();
-            this.Close();
+            
         }
 
         private void GameOver_Load(object sender, EventArgs e)
@@ -33,6 +34,13 @@ namespace Game_line
         private void Exit_click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            this.Close();  
+            HighScore hs = new HighScore();
+            hs.ShowDialog(); 
         }
     }
 }

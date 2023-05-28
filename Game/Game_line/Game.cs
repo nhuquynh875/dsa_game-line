@@ -411,7 +411,7 @@ namespace Game_line
         public void GameOver(int[,] matrix)
         {
             int count = countEmpty(a);
-            if (count <= 70) //Chinh lai 3//
+            if (count <= 3) //Chinh lai 3//
             {
                 SavePlayer_Data();
                 newGameToolStripMenuItem();
@@ -490,6 +490,7 @@ namespace Game_line
                         x--;
                         y++;
                     }
+
                     if (menuDe == true)
                     {
                         if (demngang >= 2)
@@ -504,8 +505,8 @@ namespace Game_line
                         }
                         else if (demcheophai >= 2)
                         {
-                            for (int k = 1; k < (demcheophai + 1); k++)
-                                a[i + k, j + k] = 0; arraylist.Add(new Point(i, j)); Score += demcheophai + 1;
+                            for (int k = 1; k < (demcheophai + 1); k++) a[i + k, j + k] = 0; 
+                            arraylist.Add(new Point(i, j)); Score += demcheophai + 1;
                         }
                         else if (demcheotrai >= 2)
                         {
