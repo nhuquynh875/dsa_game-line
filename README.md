@@ -84,15 +84,18 @@ Color Lines is a traditional puzzle game in which players must form lines of fiv
 
 ### Game logic :bulb:
 To launch the game, open the project in your code editor, press Run. After that, the game will be launched.
+<br />
 <img width="517" alt="gamesceen" src="https://github.com/nanalynh/DSP-lab/assets/114456930/e413e1dd-98ce-4218-9c65-6bd110035372">
 <br />
 In the Game tab contains 4 options: three levels: easy, average, hard which help player choose level game, and 
 Help, to instruct the game.
 <br />
 <img width="120" alt="level" src="https://github.com/nanalynh/DSP-lab/assets/114456930/d7aa0ecf-b55c-4cd2-97ac-d6c3d2b155a8">
+<br />
 We also help the information table so that players can login to play.
 <br />
 <img width="395" alt="infor" src="https://github.com/nhuquynh875/dsa_game-line/assets/114456930/4fc784bc-c0a4-4362-8968-d40e7c6fff6f">
+<br />
 Game over panel 
 <br />
 ![Game over background](https://github.com/nhuquynh875/dsa_game-line/assets/114456930/b3fe4531-69e1-4b00-b83a-e48ebb35ca32)
@@ -103,7 +106,7 @@ Game over panel
 
 ## UML Class Diagram and explain <a name="UML-class-diagram and explain"></a>:
 # Control 🦋:
->
+
 
 
 
@@ -120,7 +123,5 @@ Class Diagram:<br/>
 ## References<a name="References">  :eye::tongue::eye:
 
 
-<br />
 
-<p align="right">(<a href="#top">Back to top</a>)</p>
 
