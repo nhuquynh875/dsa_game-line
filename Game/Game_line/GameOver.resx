@@ -117,44 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="309430571_5969846613049377_5292086020603637971_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\309430571_5969846613049377_5292086020603637971_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gamerule64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gamerule64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gamerule7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gamerule7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gamerule" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gamerule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gamerule5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gamerule5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gamerule8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gamerule8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="istockphoto-1150113426-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\istockphoto-1150113426-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gamerule4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gamerule4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="309430571_5969846613049377_5292086020603637971_n1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\309430571_5969846613049377_5292086020603637971_n1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gamerule3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gamerule3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gamerule9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gamerule9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gamerule2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gamerule2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GameOver_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GameOver_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

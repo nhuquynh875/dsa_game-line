@@ -83,6 +83,16 @@ namespace Game_line.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GameOver_1 {
+            get {
+                object obj = ResourceManager.GetObject("GameOver_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gamerule {
             get {
                 object obj = ResourceManager.GetObject("gamerule", resourceCulture);
