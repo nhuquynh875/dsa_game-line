@@ -411,11 +411,12 @@ namespace Game_line
         public void GameOver(int[,] matrix)
         {
             int count = countEmpty(a);
-            if (count <= 3) //Chinh lai 3//
-            {
+            if (count <= 5) //Chinh lai 3//
+            { 
                 SavePlayer_Data();
                 newGameToolStripMenuItem();
                 this.Hide();
+                this.Dispose();
                 GameOver go = new GameOver();
                 go.Show();
             }
@@ -429,12 +430,19 @@ namespace Game_line
             second = Timecount / 2;
             minute = second / 60;
             second = second % 60;
-
+            Score = 0;
             Pixel[4].Image = new Bitmap("so0.bmp");
             Pixel[5].Image = new Bitmap("so0.bmp");
             Pixel[7].Image = new Bitmap("so0.bmp");
             Pixel[8].Image = new Bitmap("so0.bmp");
             Pixel[6].Image = new Bitmap("haicham" + Convert.ToString(Timecount % 2) + ".bmp");
+
+            Pixel[0].Image = null;
+            Pixel[1].Image = null;
+            Pixel[2].Image = null;
+            Pixel[3].Image = null;
+            
+
 
             Pixel[4].Image = null;
             Pixel[5].Image = null;

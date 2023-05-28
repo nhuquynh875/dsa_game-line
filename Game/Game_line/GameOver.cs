@@ -19,10 +19,9 @@ namespace Game_line
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             Game game = new Game();
-            game.newGameToolStripMenuItem();
-            game.ShowDialog();
+            game.Show();
             
         }
 
@@ -38,7 +37,7 @@ namespace Game_line
 
         private void Save_Click(object sender, EventArgs e)
         {
-            this.Close();  
+            //this.Close();  
             HighScore hs = new HighScore();
             hs.ShowDialog(); 
         }

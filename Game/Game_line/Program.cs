@@ -24,6 +24,10 @@ namespace Game_line
             player.Dispose();
             Game game = new Game();
             Application.Run(game);
+            game.Dispose();
+            GameOver over = new GameOver();
+            Application.Run(over);  
+            over.Dispose();
         }
     }
 }
