@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOver.Designer.cs">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameRule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameRule.resx">
       <DependentUpon>GameRule.cs</DependentUpon>
@@ -109,6 +118,16 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="bin\Debug\-1.png" />
+    <Content Include="bin\Debug\-2.png" />
+    <Content Include="bin\Debug\-3.png" />
+    <Content Include="bin\Debug\-4.png" />
+    <Content Include="bin\Debug\-5.png" />
+    <Content Include="bin\Debug\1.png" />
+    <Content Include="bin\Debug\2.png" />
+    <Content Include="bin\Debug\3.png" />
+    <Content Include="bin\Debug\4.png" />
+    <Content Include="bin\Debug\5.png" />
     <Content Include="bin\Debug\haicham0.bmp" />
     <Content Include="bin\Debug\haicham1.bmp" />
     <Content Include="bin\Debug\so0.bmp" />
@@ -122,6 +141,7 @@
     <Content Include="bin\Debug\so8.bmp" />
     <Content Include="bin\Debug\so9.bmp" />
     <Content Include="bin\Debug\soNone.bmp" />
+    <None Include="Resources\GameOver_1.png" />
     <None Include="Resources\gamerule9.png" />
     <None Include="Resources\gamerule8.png" />
     <None Include="Resources\gamerule7.png" />

@@ -109,7 +109,7 @@ namespace Game_line
                             remain--;
                             if (remain == 0)
                             {
-                                matrix[i, j] = 1;
+                                matrix[i, j] = random.Next(4) + 1;
                                 stop = true;
                                 break;
                             }
@@ -123,12 +123,16 @@ namespace Game_line
         }
         public static void Create_new_ball(int[,] matrix)
         {
-
             Random random = new Random();
             int count = countEmpty(matrix);
             int tmp, i, j, remain;
             bool stop;
 
+            if (count <= 3)
+            {
+                MessageBox.Show("Game over!", "Thông báo");
+                stop = true;
+            }
             for (tmp = 0; tmp < 3; tmp++)
             {
                 remain = random.Next(count--) + 1;
@@ -143,7 +147,7 @@ namespace Game_line
                             remain--;
                         if (remain == 0)
                         {
-                            matrix[i, j] = -1;
+                            matrix[i, j] = -(random.Next(4) + 1);
                             stop = true;
                             break;
                         }
@@ -151,7 +155,7 @@ namespace Game_line
                 }
             }
         }
-
+                
         public void Display_matrix(int[,] matrix)
         {
             for (int i = 0; i < 9; i++)
@@ -255,8 +259,8 @@ namespace Game_line
                         {
                             Tolen(a);
                             KiemTra(a);
+                            GameOver(a);
                             Create_new_ball(a);
-
                         }
                         Display_matrix(a);
                     }
@@ -316,12 +320,10 @@ namespace Game_line
             menuKho = true;
             menuBinhthuong = false;
         }
-
         private void helpmenu_click(object sender, EventArgs e)
         {
             GameRule pm = new GameRule();
             pm.ShowDialog();
-
         }
 
         public static Queue<Point> BFS(int[,] matrix, int x1, int y1, int x2, int y2)
@@ -399,7 +401,6 @@ namespace Game_line
             return shortest_path;
 
         }
-        
 
         public static int countEmpty(int[,] ma)
         {
@@ -409,13 +410,56 @@ namespace Game_line
                     if (ma[i, j] <= 0) count++;
             return count;
         }
+        public void GameOver(int[,] matrix)
+        {
+            int count = countEmpty(a);
+            if(count <= 70) //Chinh lai 3//
+            {
+                GameOver go = new GameOver();
+                go.ShowDialog();
+                Application.Exit();
+            }
+        }
+        public void newGameToolStripMenuItem_Click()
+        {
+            for (int i = 0; i < 9; i++)
+                for (int j = 0; j < 9; j++)
+                {
+                    a[i, j] = 0;
 
+                    a = Create_matrix();
+
+                    Display_matrix(a);
+                }
+
+            for (int i = 0; i <= 4; i++)
+            {
+                Pixel[i].Image = new Bitmap("so0.bmp");
+            }
+            for (int i = 4; i < 9; i++)
+            {
+                int giay, phut;
+                Timecount = 0;
+                giay = Timecount / 2;
+                phut = giay / 60;
+                giay = giay % 60;
+                Pixel[4].Image = new Bitmap("so" + Convert.ToString(giay % 10) + ".bmp");
+                Pixel[5].Image = new Bitmap("so" + Convert.ToString(giay / 10) + ".bmp");
+                Pixel[7].Image = new Bitmap("so" + Convert.ToString(phut % 10) + ".bmp");
+                Pixel[8].Image = new Bitmap("so" + Convert.ToString(phut / 10) + ".bmp");
+                Pixel[6].Image = new Bitmap("haicham" + Convert.ToString(Timecount % 2) + ".bmp");
+            }
+            timer.Start();
+            for (int i = 0; i < 4; i++)
+            {
+                Score = 0;
+                Pixel[i].Image = new Bitmap("so" + Convert.ToString(Score % 10) + ".bmp");
+            }
+        }
         public void KiemTra(int[,] mt)
         {
             ArrayList arraylist = new ArrayList();
             int demngang, demdoc, demcheophai, demcheotrai, x, y;
-
-
 
             for (int i = 0; i < 9; i++)
                 for (int j = 0; j < 9; j++)
@@ -549,9 +593,7 @@ namespace Game_line
 
         }
 
+        
     }
-
-    
-
 
 }
