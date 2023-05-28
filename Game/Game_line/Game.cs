@@ -411,7 +411,7 @@ namespace Game_line
         public void GameOver(int[,] matrix)
         {
             int count = countEmpty(a);
-            if (count <= 70) //Chinh lai 3//
+            if (count <= 3) //Chinh lai 3//
             {
                 SavePlayer_Data();
                 newGameToolStripMenuItem();
