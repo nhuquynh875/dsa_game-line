@@ -109,7 +109,10 @@ namespace Game_line
             for (i = 0; i < /*result*/ listView1.Columns.Count; i++)
             {
                 ListViewItem listItem = new ListViewItem(Convert.ToString(2));
+<<<<<<< HEAD
                 // MessageBox.Show("asfasdf");
+=======
+>>>>>>> 1056fd2302a03ef0fe683322aa29fc32b4c388df
                 listItem.SubItems.Add(Name[i]);
                 listItem.SubItems.Add(Score[i]);
                 listItem.SubItems.Add(Time[i]);
