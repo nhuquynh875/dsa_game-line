@@ -1,4 +1,4 @@
-![menupanel](https://user-images.githubusercontent.com/114456930/209471711-21f36fe7-3da9-4780-a3a5-8045ee586cab.png)
+![menupanel](https://github.com/nanalynh/DSP-lab/assets/114456930/f1ba0c18-b4f3-4fb5-bf7e-79036eb5b79f)
 
 
 
