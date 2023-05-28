@@ -85,12 +85,16 @@ Color Lines is a traditional puzzle game in which players must form lines of fiv
 ### Game logic :bulb:
 To launch the game, open the project in your code editor, press Run. After that, the game will be launched.
 <img width="517" alt="gamesceen" src="https://github.com/nanalynh/DSP-lab/assets/114456930/e413e1dd-98ce-4218-9c65-6bd110035372">
+<br />
 In the Game tab contains 4 options: three levels: easy, average, hard which help player choose level game, and 
 Help, to instruct the game.
+<br />
 <img width="120" alt="level" src="https://github.com/nanalynh/DSP-lab/assets/114456930/d7aa0ecf-b55c-4cd2-97ac-d6c3d2b155a8">
 We also help the information table so that players can login to play.
+<br />
 <img width="395" alt="infor" src="https://github.com/nhuquynh875/dsa_game-line/assets/114456930/4fc784bc-c0a4-4362-8968-d40e7c6fff6f">
 Game over panel 
+<br />
 ![Game over background](https://github.com/nhuquynh875/dsa_game-line/assets/114456930/b3fe4531-69e1-4b00-b83a-e48ebb35ca32)
 
 
@@ -99,39 +103,9 @@ Game over panel
 
 ## UML Class Diagram and explain <a name="UML-class-diagram and explain"></a>:
 # Control 🦋:
- Class Diagram<br/>
-<img width="358" alt="control" src="">
-<br />
-Container class: use the CardLayout in Jpanel lib.CardLayout class manages the components in such a manner that only one component is visible at a time and it treats each component as a card .
-<br />
-GameManager class:
-Method readMap() help the computer can read, understand the map and set the location for the items on the map  in-game
+>
 
-Al(t) helps the boss automatically move 
--We have to edit the checkMoveBoom() ,moveBoss() ,checkBoomToBoss() ,checkBoomToBoom(),checkDieToBoss() in the Boss, Player and BomBang class. Instead of taking input from the keyboard, you will get the object's direction from the _ai attribute via the AI() function.Here we use the isEmpty() method which checks whether a string is empty or not (all the boss die or not).This myPlayerBoom() method allows the player to place bombs at any allowed location.
-<br/>
-*With AI the simplest is to go random, orient classes to return random values. Specifying the return integer value corresponding to which direction is up to you to decide in function initBoss().
-<br/>
-*In inititIterm()we set the update power items randomly after the object can destruct base the map on the mapIterm()
-<br/>
-PanelGame class:
-The run() in PanelGame is controlled ANYA BOMBER base on input( Up, Down,Left, Right) from the keyboard, checking the conditions for placing bombs, including: whether to receive a bomb signal from the player ( _input. space ), the time between two bombs, it also directs the win panel and the game over panel when player lose or win.The try-catch statements in run() method handles any exceptions that may occur.The "thread.sleep" is to wait 20 ms before calling move so that all the objects are completely created.
 
-# Control buttons 🎛️:
-<br/>
-Class Diagram:
-<br/>
-<img width="399" alt="controlbutton" src="https://user-images.githubusercontent.com/114456930/209488333-b53e755d-585c-4c52-80da-a5f116c146c1.png">
-<br/>
-This class presents the menu game with three buttons(Start, Help, Exit) for players to begin the games.The initComponents()will set the size, the location and add  images of button on menu background.The initListener() is used when player click any button and it work depend on the package  java.awt.event.ActionListener
-ActionListener in Java is a class that is responsible for handling all action events such as when the user clicks on a component.For buttons Start to come to panel game,Help to come to the PanelHelp , Exit to exit of the game .
-
-# Sound Controns 🔊:
-Class Diagram:
-<br/>
-<img width="382" alt="sound" src="https://user-images.githubusercontent.com/114456930/209489361-0b6f0f04-425e-415b-8a7b-7cd75360265d.png">
-
-<br/>Sound class: is control by class sound which can add sounds to the game, including background sounds and the sounds of in-game events (bombs exploding, characters dying, winning, eating items, etc.). Note that the background sound and the event are independent of each other, ie playing the event sound does not affect the background sound.
 
 ## Model 😊:
 # Player class:
