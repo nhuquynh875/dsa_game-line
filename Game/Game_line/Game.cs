@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
+using System.Media;
+using System.IO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
@@ -128,11 +131,6 @@ namespace Game_line
             int tmp, i, j, remain;
             bool stop;
 
-            if (count <= 3)
-            {
-                MessageBox.Show("Game over!", "Thông báo");
-                stop = true;
-            }
             for (tmp = 0; tmp < 3; tmp++)
             {
                 remain = random.Next(count--) + 1;
@@ -413,48 +411,37 @@ namespace Game_line
         public void GameOver(int[,] matrix)
         {
             int count = countEmpty(a);
-            if(count <= 70) //Chinh lai 3//
+            if (count <= 70) //Chinh lai 3//
             {
+                SavePlayer_Data();
+                newGameToolStripMenuItem();
+                this.Hide();
                 GameOver go = new GameOver();
-                go.ShowDialog();
-                Application.Exit();
+                go.Show();
             }
         }
-        public void newGameToolStripMenuItem_Click()
+
+        public void newGameToolStripMenuItem()
         {
-            for (int i = 0; i < 9; i++)
-                for (int j = 0; j < 9; j++)
-                {
-                    a[i, j] = 0;
+            timer.Stop();
+            timecountofbox = 0;
+            Timecount = 0;
+            second = Timecount / 2;
+            minute = second / 60;
+            second = second % 60;
 
-                    a = Create_matrix();
+            Pixel[4].Image = new Bitmap("so0.bmp");
+            Pixel[5].Image = new Bitmap("so0.bmp");
+            Pixel[7].Image = new Bitmap("so0.bmp");
+            Pixel[8].Image = new Bitmap("so0.bmp");
+            Pixel[6].Image = new Bitmap("haicham" + Convert.ToString(Timecount % 2) + ".bmp");
 
-                    Display_matrix(a);
-                }
+            Pixel[4].Image = null;
+            Pixel[5].Image = null;
+            Pixel[7].Image = null;
+            Pixel[8].Image = null;
+            Pixel[6].Image = null;
 
-            for (int i = 0; i <= 4; i++)
-            {
-                Pixel[i].Image = new Bitmap("so0.bmp");
-            }
-            for (int i = 4; i < 9; i++)
-            {
-                int giay, phut;
-                Timecount = 0;
-                giay = Timecount / 2;
-                phut = giay / 60;
-                giay = giay % 60;
-                Pixel[4].Image = new Bitmap("so" + Convert.ToString(giay % 10) + ".bmp");
-                Pixel[5].Image = new Bitmap("so" + Convert.ToString(giay / 10) + ".bmp");
-                Pixel[7].Image = new Bitmap("so" + Convert.ToString(phut % 10) + ".bmp");
-                Pixel[8].Image = new Bitmap("so" + Convert.ToString(phut / 10) + ".bmp");
-                Pixel[6].Image = new Bitmap("haicham" + Convert.ToString(Timecount % 2) + ".bmp");
-            }
-            timer.Start();
-            for (int i = 0; i < 4; i++)
-            {
-                Score = 0;
-                Pixel[i].Image = new Bitmap("so" + Convert.ToString(Score % 10) + ".bmp");
-            }
         }
         public void KiemTra(int[,] mt)
         {
@@ -593,7 +580,25 @@ namespace Game_line
 
         }
 
-        
+        private void SavePlayer_Data()
+        {
+            try
+            {
+                FileStream stream = new FileStream("Score.txt", FileMode.Append, FileAccess.Write);
+                StreamWriter write = new StreamWriter(stream, Encoding.Unicode);//mac dinh la unicode
+                write.WriteLine(Player.playerName);
+                write.WriteLine(Score);
+                write.WriteLine(Timecount);
+                write.Flush();// dung de xac dinh: xoa tat ca du lieu tu vung dem va du lieu chi duoc ghi tu vung dem
+                write.Close();
+                stream.Close();
+            }
+            catch
+            {
+                MessageBox.Show("The progress has some difficulties", "Announcement", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 
 }

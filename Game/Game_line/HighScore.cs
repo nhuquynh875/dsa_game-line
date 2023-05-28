@@ -49,9 +49,9 @@ namespace Game_line
         {
             try
             {
-                i = 0;
+                int i = 0;
                 //Pass the file path and file name to the StreamReader constructor
-                StreamReader sr = new StreamReader(@"Score.txt");
+                StreamReader sr = new StreamReader("Score.txt");
 
                 Name[i] = sr.ReadLine();
                 Score[i] = sr.ReadLine();
@@ -59,7 +59,6 @@ namespace Game_line
 
                 while (Name[i] != null)
                 {
-
                     i++;
                     Name[i] = sr.ReadLine();
                     Score[i] = sr.ReadLine();
@@ -85,7 +84,7 @@ namespace Game_line
             ListView listView1 = new ListView();
             listView1.Bounds = new Rectangle(new Point(15, 10), new Size(300, 200));
 
-            listView1.View = View.Details;
+            
             listView1.LabelEdit = true;
             listView1.AllowColumnReorder = true;
             listView1.FullRowSelect = true;
@@ -102,19 +101,22 @@ namespace Game_line
                 result = 10;
 
             }
-            for (int j = 0; j < result; j++)
-            {
-                ListViewItem listItem = new ListViewItem(Convert.ToString(j + 1));
-
-                listItem.SubItems.Add(Name[j]);
-                listItem.SubItems.Add(Score[j]);
-                listItem.SubItems.Add(Time[j]);
-                listView1.Items.Add(listItem);
-            }
+            listView1.View = View.Details;
             listView1.Columns.Add("STT", -2, HorizontalAlignment.Left);
             listView1.Columns.Add("Họ tên", -2, HorizontalAlignment.Left);
             listView1.Columns.Add("Điểm", -2, HorizontalAlignment.Left);
             listView1.Columns.Add("Thời gian", -2, HorizontalAlignment.Left);
+            for (i = 0; i < /*result*/ listView1.Columns.Count; i++)
+            {
+                ListViewItem listItem = new ListViewItem(Convert.ToString(2));
+                MessageBox.Show("asfasdf");
+                listItem.SubItems.Add(Name[i]);
+                listItem.SubItems.Add(Score[i]);
+                listItem.SubItems.Add(Time[i]);
+                listView1.Items.Add(listItem);
+                
+            }
+            
             listView1.EndUpdate();
 
             this.Controls.Add(listView1);

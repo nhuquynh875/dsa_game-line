@@ -47,8 +47,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 450);
             this.Controls.Add(this.button1);
-            this.Name[0] = "HighScore";
-            this.Text = "HighScore";
             this.Load += new System.EventHandler(this.HighScore_Load);
             this.ResumeLayout(false);
 
