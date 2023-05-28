@@ -104,15 +104,7 @@ Game over panel
 
 
 
-## UML Class Diagram and explain <a name="UML-class-diagram and explain"></a>:
-# Control 🦋:
 
-
-
-
-## Model 😊:
-# Player class:
-Class Diagram:<br/>
 
 
 
