@@ -56,8 +56,12 @@ Our team leveraged our knowledge and skills in Algorithms and Data Structures to
 |   4   |  Nguyen Huu Chau      | ITITIU20174 | ITITIU20174@student.hcmiu.edu.vn         | [Chau]( https://github.com/HChau1)                          |Mr.Thanh  |
 
 
-
-
+| Order | Task                                                     		    |  Person   |contribution|
+| :---- | :--------------------------------------------------------------------:    |:-----------: | :---------:|
+| 1     |   code and design Game class,data structures and algorithms,game over     | nhu quynh  | 27%|
+| 2     |   game help class, readme,function kiem tra in game class,background of the game over | Thanh Thao|26%|
+| 3     |   report, powerpoint, class diagram, main class, player class     | Tu Quyen  |28%|
+| 4     |     Highscore class, design character (balls),     | Huu Chau |19%|
 
 <!-- Game -->
 <br />
