@@ -90,7 +90,7 @@ We also help the information table so that players can login to play.
 <br />
 Game over panel 
 <br />
-![Game over background](https://github.com/nhuquynh875/dsa_game-line/assets/114456930/b3fe4531-69e1-4b00-b83a-e48ebb35ca32)
+![image](https://github.com/nhuquynh875/dsa_game-line/assets/114456930/78ead99d-9a18-4c83-bfd4-a5f2e4109e7f)
 
 
 
