@@ -10,7 +10,7 @@
 1. [Introduction](#Introduction)
 2. [Game](#Game)
 3. [UML-class-diagram-and-explain](#UML-class-diagram-and-explain)
-7. [References](#References)
+
 <!-- <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -98,6 +98,8 @@ Game over panel
 <br />
 ![image](https://github.com/nhuquynh875/dsa_game-line/assets/114456930/78ead99d-9a18-4c83-bfd4-a5f2e4109e7f)
 
+## UML-class-diagram-and-explain:
+![MicrosoftTeams-image](https://github.com/nhuquynh875/dsa_game-line/assets/114456930/112189f9-79e2-4977-a140-cd0da5d6a4fe)
 
 
 
