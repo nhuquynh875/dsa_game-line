@@ -96,15 +96,6 @@ Game over panel
 
 
 
-## design pattern:
-Singleton is using by 
-<br />
-![image](https://github.com/nhuquynh875/dsa_game-line/assets/114456930/1d0cff37-2d2b-49d4-8f66-ea57ae7dd85e)
-<br />
-Prototype is a creational in
-<br />
-<img width="271" alt="spi" src="https://github.com/nhuquynh875/dsa_game-line/assets/114456930/0ac5c1ff-8a4a-4799-ada3-71f4e0879f14">
-<br />
 
 
 
